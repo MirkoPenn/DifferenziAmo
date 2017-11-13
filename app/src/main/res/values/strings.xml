@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">DifferenziAmo</string>
+
+    <string name="a_home">Home</string>
+    <string name="a_calendario">Calendario</string>
+    <string name="a_dovelobutto">Dove lo butto?</string>
+    <string name="a_dovesitrova">Dove si trova?</string>
+    <string name="a_servizi">Servizi ai cittadini</string>
+    <string name="a_impostazioni">Impostazioni</string>
+    <string name="a_faq">F.A.Q.</string>
+    <string name="a_credits">Credits</string>
+
+    <string name="s_home">Home</string>
+    <string name="s_raccolta">Raccolta differenziata</string>
+    <string name="s_altro">Altro</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!--CALENDARIO-->
+    <string name="calendario_data">Data</string>
+    <string name="calendario_button">Vai al calendario completo</string>
+    <string name="calendario_oggi_puoi_buttare">Oggi puoi buttare:</string>
+    <string name="calendario_categoria">Categoria</string>
+    <string name="calendario_dove_puoi_buttare">Dove puoi buttare:</string>
+
+
+
+</resources>
