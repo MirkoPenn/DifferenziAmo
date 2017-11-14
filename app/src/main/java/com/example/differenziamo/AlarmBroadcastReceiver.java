@@ -18,6 +18,7 @@ import java.util.Calendar;
 //per la notifica viene utilizzato un timer che ogni giorno risveglia l'app. Quando viene svegliata
 // si utilizza questa classe(Broadcast Receiver) che verifica se generare la notifica o meno.
 //Quindi il timer viene resettato in modo tale da risvegliarsi 24 ore dopo
+
 public class AlarmBroadcastReceiver extends BroadcastReceiver {
 
 	@TargetApi(Build.VERSION_CODES.KITKAT)
