@@ -14,7 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.differenziamo.classes.ElementoImageList;
+import com.example.differenziamo.customobjects.ElementoImageList;
 import com.example.differenziamo.database.DBClass;
 
 import java.util.ArrayList;

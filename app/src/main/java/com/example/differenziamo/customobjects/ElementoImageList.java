@@ -1,4 +1,4 @@
-package com.example.differenziamo.classes;
+package com.example.differenziamo.customobjects;
 
 import java.io.Serializable;
 

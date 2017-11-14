@@ -1,4 +1,4 @@
-package com.example.differenziamo.classes;
+package com.example.differenziamo.customobjects;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -61,7 +61,7 @@ public class ImageListAdapter extends BaseAdapter {
 		//otteniamo	l'elemento alla posizione richiesta
 		ElementoImageList elem = (ElementoImageList) getItem(position);
 
-		// scegliamo il logo usando la funzione getResources.getIdentifier
+		// scegliamo il logo_missing usando la funzione getResources.getIdentifier
 		ImageView logo = (ImageView) convertView.findViewById(R.id.imagelist_logo);
 		logo.setImageResource(this.context.getResources().getIdentifier(elem.getPathLogoElemento(), "drawable", this.context.getPackageName()));
 		
@@ -111,7 +111,7 @@ public class ImageListAdapter extends BaseAdapter {
 	}
 	
 //	public int getLogo(ElementoLista elem){
-//		//la funzione getLogo, in base al tipo (TIPO_RIFIUTI o TIPO_SPECIALI), sceglie la risorsa giusta per il logo
+//		//la funzione getLogo, in base al tipo (TIPO_RIFIUTI o TIPO_SPECIALI), sceglie la risorsa giusta per il logo_missing
 //		//della categoria (presa da elem con il metodo getCategoria)
 //		if (tipo==TIPO_RIFIUTI)
 //			switch (elem.getIdCategoria()){

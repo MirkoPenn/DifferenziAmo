@@ -5,7 +5,7 @@
     tools:context="com.example.differenziamo.MainActivity" >
 
     <ListView
-        android:id="@+id/listView_dovesitrova"
+        android:id="@+id/listView_servizi"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"

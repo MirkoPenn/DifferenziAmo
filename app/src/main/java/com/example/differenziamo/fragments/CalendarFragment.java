@@ -1,13 +1,11 @@
 package com.example.differenziamo.fragments;
 
 
-import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.os.StrictMode;
-import android.support.design.widget.NavigationView;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.differenziamo.R;
-import com.example.differenziamo.classes.CategoriaDifferenziata;
+import com.example.differenziamo.customobjects.CategoriaDifferenziata;
 import com.example.differenziamo.database.DBClass;
 
 import java.util.ArrayList;

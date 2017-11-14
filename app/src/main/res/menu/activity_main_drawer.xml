@@ -6,7 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_home"
             android:title="@string/a_home" />
     </group>
 
@@ -16,19 +16,19 @@
             <group android:checkableBehavior="single">
             <item
                 android:id="@+id/nav_calendario"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_calendario"
                 android:title="@string/a_calendario" />
             <item
                 android:id="@+id/nav_dovelobutto"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_dovelobutto"
                 android:title="@string/a_dovelobutto" />
             <item
                 android:id="@+id/nav_dovesitrova"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_dovesitrova"
                 android:title="@string/a_dovesitrova" />
             <item
                 android:id="@+id/nav_servizi"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_servizi"
                 android:title="@string/a_servizi" />
             </group>
         </menu>
@@ -40,15 +40,15 @@
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_impostazioni"
-                    android:icon="@drawable/ic_menu_share"
+                    android:icon="@drawable/ic_impostazioni"
                     android:title="@string/a_impostazioni" />
                 <item
                     android:id="@+id/nav_faq"
-                    android:icon="@drawable/ic_menu_send"
+                    android:icon="@drawable/ic_faq"
                     android:title="@string/a_faq" />
                 <item
                     android:id="@+id/nav_credits"
-                    android:icon="@drawable/ic_menu_send"
+                    android:icon="@drawable/ic_credits"
                     android:title="@string/a_credits" />
             </group>
         </menu>

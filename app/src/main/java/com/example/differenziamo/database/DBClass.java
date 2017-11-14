@@ -3,8 +3,8 @@ package com.example.differenziamo.database;
 import android.content.Context;
 import android.database.Cursor;
 
-import com.example.differenziamo.classes.CategoriaDifferenziata;
-import com.example.differenziamo.classes.ElementoImageList;
+import com.example.differenziamo.customobjects.CategoriaDifferenziata;
+import com.example.differenziamo.customobjects.ElementoImageList;
 
 import java.sql.Statement;
 import java.util.ArrayList;

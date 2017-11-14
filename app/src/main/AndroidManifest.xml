@@ -61,6 +61,18 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
+        <activity
+            android:name=".ServiziItemActivity"
+            android:label="@string/servizi_item_title"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <service android:name="AlarmBroadcastReceiver" >
+        </service>
+
+        <receiver android:name=".AlarmBroadcastReceiver" >
+        </receiver>
+
     </application>
 
 </manifest>

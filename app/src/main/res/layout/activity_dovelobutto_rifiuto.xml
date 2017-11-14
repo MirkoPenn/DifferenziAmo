@@ -26,7 +26,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/textview_nome_rifiuto"
         android:layout_marginTop="10dp"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logo_missing" />
 
     <TextView
         android:id="@+id/textview_categoria_rifiuto"

@@ -15,7 +15,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
         android:scaleType="fitXY"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logo_missing" />
 
     <TextView
         android:id="@+id/imagelist_text"
@@ -29,6 +29,6 @@
         android:gravity="center_vertical|left"
         android:text="TextView"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/nero" />
+        android:textColor="@color/black" />
 
 </RelativeLayout>

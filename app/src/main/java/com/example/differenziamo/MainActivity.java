@@ -1,16 +1,16 @@
 package com.example.differenziamo;
 
-import android.app.Activity;
+import android.annotation.TargetApi;
+import android.app.AlarmManager;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
-import android.graphics.Typeface;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.text.Html;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -21,12 +21,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.example.differenziamo.classes.CategoriaDifferenziata;
-import com.example.differenziamo.classes.ElementoImageList;
-import com.example.differenziamo.database.DBClass;
+import com.example.differenziamo.customobjects.CategoriaDifferenziata;
+import com.example.differenziamo.customobjects.ElementoImageList;
 import com.example.differenziamo.fragments.*;
 
 import java.util.ArrayList;
@@ -139,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
                 }
             });
+            fab.setImageResource(R.drawable.ic_calendario_settimanale);
             fab.setVisibility(View.VISIBLE);
 
         } else if (id == R.id.nav_dovelobutto) {
@@ -164,6 +162,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             onItemClickMethod = R.string.a_dovesitrova;
 
         } else if (id == R.id.nav_servizi) {
+
+            fragment = new ServiziFragment();
+            mTitle = getString(R.string.a_servizi);
+
+            // remove button
+            fab.setVisibility(View.INVISIBLE);
+
+            // set the right onItemClick function
+            onItemClickMethod = R.string.a_servizi;
 
         } else if (id == R.id.nav_impostazioni) {
 
@@ -229,8 +236,121 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case (R.string.a_servizi):
 
+                Intent intent = new Intent(this, ServiziItemActivity.class); 					//creo un oggetto intent
+                Bundle b = new Bundle();												//creo il bundle
+                b.putInt("position", position);											//metto la posizione degli item del ListView nel bundle
+                intent.putExtras(b);													//metto il bundle nell'intent
+                startActivity(intent);
 
                 break;
+        }
+    }
+
+    // *******************  GESTIONE NOTIFICA    ************
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // TODO Auto-generated method stub
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == Utils._ResultIndirizzo) {
+            if(resultCode == RESULT_OK){
+                FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new CalendarFragment())
+                        .commit();
+            }
+            if (resultCode == RESULT_CANCELED) {
+                //Write your code if there's no result
+            }
+        }
+    }
+
+    @TargetApi(Build.VERSION_CODES.KITKAT)
+    private void setAlarm()
+    {
+        final SharedPreferences prefs = this.getSharedPreferences(Utils.MY_PREFERENCES, Context.MODE_PRIVATE);
+        Intent dialogIntent = new Intent(this, AlarmBroadcastReceiver.class);
+
+        if(prefs.getInt("alarmSetted", 1)==1)
+        {
+
+            AlarmManager alarmMgr = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 123, dialogIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+
+            Calendar calendar = Calendar.getInstance();
+
+
+
+            Utils.Log("Configuro alarm");
+
+            //alarmMgr.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(), 1000*60*60*24, pendingIntent);
+
+
+
+
+            //Utils.Log("Orario: "+calendar.get(Calendar.HOUR_OF_DAY));
+            if(calendar.get(Calendar.HOUR_OF_DAY)>19) calendar.add(Calendar.DAY_OF_MONTH, 1);
+            calendar.set(Calendar.SECOND, 0);
+            calendar.set(Calendar.MINUTE, 0);
+            calendar.set(Calendar.HOUR, 8);
+            calendar.set(Calendar.AM_PM, Calendar.PM);
+
+
+
+            int currentapiVersion = android.os.Build.VERSION.SDK_INT;
+            if (currentapiVersion >= android.os.Build.VERSION_CODES.KITKAT){
+                // Do something for froyo and above versions
+                alarmMgr.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+            } else{
+                // do something for phones running an SDK before kitkat
+                alarmMgr.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+            }
+
+
+
+
+
+
+
+
+            prefs.edit().putInt("alarmSetted", 1).commit();
+            //Utils.Log(calendar.toString());
+
+            //alarmMgr.cancel(PendingIntent.getBroadcast(this, 24, dialogIntent,PendingIntent.FLAG_CANCEL_CURRENT));
+            //alarmMgr.cancel(PendingIntent.getBroadcast(this, 24, dialogIntent,PendingIntent.FLAG_NO_CREATE));
+            //alarmMgr.cancel(PendingIntent.getBroadcast(this, 24, dialogIntent,PendingIntent.FLAG_UPDATE_CURRENT));
+
+			/*
+			boolean isWorking = (PendingIntent.getBroadcast(this, 0, dialogIntent, PendingIntent.FLAG_NO_CREATE) != null);//just changed the flag
+			if (isWorking)
+			{
+				alarmMgr.cancel(PendingIntent.getBroadcast(this, 0, dialogIntent,PendingIntent.FLAG_UPDATE_CURRENT));
+			}
+			Utils.Log("alarm is " + (isWorking ? "" : "not") + " working...");
+
+			if(!prefs.getBoolean("alarmSetted", false))
+			{
+
+			}
+
+
+			if(!isWorking)
+			{
+				PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, dialogIntent,PendingIntent.FLAG_CANCEL_CURRENT);
+
+				Calendar calendar = Calendar.getInstance();
+				calendar.set(Calendar.SECOND, 0);
+				calendar.set(Calendar.MINUTE, 0);
+				calendar.set(Calendar.HOUR, 7);
+				calendar.set(Calendar.AM_PM, Calendar.PM);
+
+				Utils.Log("Configuro alarm");
+		        alarmMgr.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(), 1000*60*60*24, pendingIntent);
+			}
+			*/
+
         }
     }
 

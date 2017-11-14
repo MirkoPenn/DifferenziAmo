@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">DifferenziAmo</string>
 
+    <string name="description_navheader">Guida alla raccolta differenziata</string>
+
     <string name="a_home">Home</string>
     <string name="a_calendario">Calendario</string>
     <string name="a_dovelobutto">Dove lo butto?</string>
@@ -54,5 +56,72 @@
     <string name="map_descrizione">Descrizione</string>
     <string name="map_tipo">TIPO MAPPA</string>
 
+    <!--SERVIZI-->
+
+    <!--SERVIZI ITEM-->
+    <string name="servizi_item_title">Servizio</string>
+    <string name="che_cos_e">Che cos\'è\?</string>
+    <string name="quali_rifiuti_puoi_conferire">Quali rifiuti puoi conferire?</string>
+<string name="quando_dove">Quando e dove?</string>
+
+    <string name="titolo_centri_raccolta">CENTRI DI RACCOLTA ITINERANTE</string>
+    <string name="cosa_centri_raccolta">I Centri di Raccolta Itinerante (INGOMBRANTI E RAAE) sono delle piccole isole ecologiche per la raccolta dei rifiuti ingombranti e dei RAEE (rifiuti elettrici ed elettronici).\n
+Questo importante servizio per la città di Pomigliano d\'Arco crea una nuova modalità di deposito dei rifiuti che si affianca ai tradizionali servizi della ENAM.\n
+I centri di raccolta itineranti sono infatti composti da mezzi per la raccolta che possono essere posizionati facilmente.\n
+Ogni CRI è presidiato dal personale ENAM.\n</string>
+    <string name="rifiuti_centri_raccolta">La presenza itinerante del CRI nei vari quartieri di Pomigliano d\'Arco è una sperimentazione che ENAM insieme all\'Amministrazione Comunale vuole mettere in campo, allo scopo di sensibilizzare i cittadini alla raccolta differenziata dei rifiuti ingombranti.
+I cittadini potranno portare tanti tipi di materiali differenti, come ad esempio:\n\n
+-Elettrodomestici (lavatrici, cucine, frigoriferi, televisori, ecc.)\n
+-Ingombranti misti (poltrone, divani, soprammobili, ecc.)\n
+-Ingombranti metallici (letti, reti da letto, scaffali, schedari, ecc.)\n
+-Ingombranti di legno (mobili, scrivanie, tavoli, librerie, tavolini, letti, comodini, ecc.)\n</string>
+    <string name="quando_centri_raccolta">Il calendario degli spostamenti è mensile e prevede appuntamenti il lunedì ed il venerdi dalle 07:00 alle 12:00\n\n
+-Primo lunedì del mese: Piazza Primavera\n
+-Primo venerdì del mese: Via Giuseppe Mazzini 54\n
+-Secondo lunedì del mese: Via Felice Cavallotti 56\n
+-Secondo venerdì del mese: Via Roma 42\n
+-Terzo lunedì del mese: Via S. Pietro 192\n
+-Terzo venerdì del mese: Via Vittorio Tufano 1\n
+-Quarto lunedì del mese: Via Roma 466\n
+-Quarto venerdì del mese: Largo Salvatore de Falco
+</string>
+
+    <string name="titolo_isole_ecologiche">ISOLE ECOLOGICHE</string>
+    <string name="cosa_isole_ecologiche">Le isole ecologiche sono aree opportunamente attrezzate e custodite, destinate al
+conferimento di frazioni recuperabili o soggette a smaltimenti particolari dei rifiuti urbani
+ed assimilati. Le isole ecologiche hanno come obiettivo l\'attività di raccolta
+mediante raggruppamento differenziato dei rifiuti per frazioni omogenee conferiti dai
+detentori per il trasporto agli impianti di recupero e trattamento nonché di promuovere,
+con l\'osservanza di criteri di economicità ed efficienza, sistemi tendenti al recupero dei
+rifiuti e di avviare ad idonee forme di smaltimento rifiuti urbani pericolosi. Le tipologie dei
+rifiuti che possono essere conferite presso le isole ecologiche sono stabilite dal
+Comune di Pomigliano d\'Arco.\n </string>
+    <string name="rifiuti_isole_ecologiche">Le isole ecologiche, anche sulla base alle eventuali specifiche autorizzazioni, sono idonee alla
+ricezione-stoccaggio dei seguenti rifiuti, suddivisi tra residui destinati al recupero e residui
+destinati allo smaltimento:\n
+a) Residui a recupero: legname, vetro, carta e cartoni, plastiche, rottami metallici,
+materiali inerti edili, beni durevoli, accumulatori, oli grassi vegetali, rifiuti ingombranti,
+suddivisi per tipologia, ecc.\n
+b) Residui a smaltimento: farmaci scaduti, pile esauste, rifiuti urbani pericolosi in genere,
+ecc.\n</string>
+    <string name="quando_isole_ecologiche">L\'isola ecologica di Pomigliano d\'Arco è situata in Via Gorizia 29.\n
+Essa sarà presidiata dal personale preposto dal lunedì al sabato dalle ore
+8.00 alle ore 14.00 mentre l\'accesso al pubblico sarà consentito dal lunedì al sabato dalle ore
+08.30 alle ore 12:30.</string>
+
+    <string name="titolo_sfalci_potature">SERVIZIO DI CONFERIMENTO DI SFALCI E POTATURE</string>
+    <string name="cosa_sfalci_potature">Sfalci e ramaglie sono materiali che si possono recuperare.
+Gli scarti vegetali raccolti in modo differenziato e sottoposti ad una fermentazione controllata,
+possono essere trasformati in un particolare terriccio, chiamato compost, molto utile in agricoltura e nel giardinaggio.\n
+Le attività di compostaggio domestico, contribuiscono alla riduzione del totale di questi rifiuti.\n</string>
+    <string name="rifiuti_sfalci_potature"> -sfalci d\'erba\n
+-potature siepi\n
+-ramaglie\n
+-foglie e terricci\n
+-cortecce\n</string>
+    <string name="quando_sfalci_potature">Il conferimento di Sfalci e potature (VERDE) può essere effettuato
+dal lunedì al sabato dalle ore 07:00 alle 14:00
+nel cassone scarrabile posto nel parcheggio dell\'Impianto sportivo Stadio Giuseppe Leone,
+ubicato sulla strada Provinciale Pomigliano-Acerra.</string>
 
 </resources>

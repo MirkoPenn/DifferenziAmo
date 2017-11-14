@@ -22,7 +22,7 @@
         android:layout_alignLeft="@+id/map"
         android:layout_alignParentTop="true"
         android:text="@string/map_indirizzo"
-        android:textColor="@color/nero"
+        android:textColor="@color/black"
         android:textSize="16dp" />
 
     <TextView

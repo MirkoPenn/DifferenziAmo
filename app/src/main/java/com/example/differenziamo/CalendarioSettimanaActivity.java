@@ -1,16 +1,11 @@
 package com.example.differenziamo;
 
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -18,7 +13,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import com.example.differenziamo.classes.CategoriaDifferenziata;
+import com.example.differenziamo.customobjects.CategoriaDifferenziata;
 import com.example.differenziamo.database.DBClass;
 
 import java.util.ArrayList;
@@ -48,7 +43,7 @@ public class CalendarioSettimanaActivity extends Activity {
 				  TableLayout stk = (TableLayout) findViewById(R.id.table_layout7);
 				  TableRow tbrow = new TableRow(this);																							//viene creata una nuova riga
 	              ImageView iv1 = new ImageView(this);																							//viene creata una nuova immagine
-	              iv1.setImageResource(getResources().getIdentifier("logo_cat_"+i.getIdCategoria(), "drawable", getPackageName()));				//viene scelto il logo da stampare in base alla categoria del rifiuto
+	              iv1.setImageResource(getResources().getIdentifier("logo_cat_"+i.getIdCategoria(), "drawable", getPackageName()));				//viene scelto il logo_missing da stampare in base alla categoria del rifiuto
 	              TextView tv1 = new TextView(this);																							//viene creato un nuovo testo
 	              tv1.setText(i.getNome());
 	              tv1.setTextColor(Color.BLACK);

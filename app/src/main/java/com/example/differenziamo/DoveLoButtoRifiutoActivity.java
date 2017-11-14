@@ -2,22 +2,13 @@ package com.example.differenziamo;
 
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
-import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
-
-import com.example.differenziamo.classes.CategoriaDifferenziata;
-import com.example.differenziamo.database.DBClass;
-
-import java.util.ArrayList;
 
 
 public class DoveLoButtoRifiutoActivity extends Activity {

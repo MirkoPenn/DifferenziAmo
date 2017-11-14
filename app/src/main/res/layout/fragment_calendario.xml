@@ -67,7 +67,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="@string/calendario_data"
-        android:textColor="@color/nero"
+        android:textColor="@color/black"
         android:textSize="30dp" />
 
     <Button
@@ -80,7 +80,7 @@
         android:onClick="onClickCalendarioSettimana"
         android:visibility="invisible"
         android:text="@string/calendario_button"
-        android:textColor="@color/nero"/>
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/textView_oggipuoibuttare"
@@ -90,7 +90,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="150dp"
         android:text="@string/calendario_oggi_puoi_buttare"
-        android:textColor="@color/nero"
+        android:textColor="@color/black"
         android:textSize="16dp" />
 
     <TextView
@@ -101,7 +101,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="100dp"
         android:text="@string/calendario_categoria"
-        android:textColor="@color/nero"
+        android:textColor="@color/black"
         android:textSize="22dp" />
 
     <LinearLayout
@@ -120,7 +120,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="35dp"
             android:text="@string/calendario_dove_puoi_buttare"
-            android:textColor="@color/nero"
+            android:textColor="@color/black"
             android:textSize="16dp" />
 
     </LinearLayout>
