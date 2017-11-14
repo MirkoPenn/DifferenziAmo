@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 
 import com.example.differenziamo.classes.CategoriaDifferenziata;
+import com.example.differenziamo.classes.ElementoImageList;
 
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -81,101 +82,101 @@ public class DBClass {
 //	}
 	
 	//QUERY per ricavare i dati della categoria "rifiuti" per l'activity "dove lo butto"
-//	public static ArrayList<ElementoImageList> queryRifiuti(Context context) {
-//
-//		Statement stat = null;
-//		ArrayList<ElementoImageList> dati = new ArrayList<ElementoImageList>();
-//		String query = "SELECT rifiuto_nome,rifiuto_categoria,categoria_nome,categoria_modalita,categoria_colore FROM (rifiuti JOIN categorie ON rifiuti.rifiuto_categoria=categorie.categoria_id) ORDER BY rifiuto_nome";
-//
-//		try {
-//
-//			//controlla se la connessione è chiusa: in tal caso, si riconnette
-//			//if (conn.isClosed()){
-//				//DBClass.getDBConnection(this);
-//			//}
-//
-//			//creo lo statement in stat
-//			//stat = conn.createStatement();
-//
-//			//eseguo lo statement e inserisco il risultato della query nel resultset
-//			//ResultSet res = stat.executeQuery(query);
-//			DBAsset dbHelper = new DBAsset(context, "differenziata.db", 1);
-//
-//			Cursor crs = dbHelper.query(query);
-//
-//			//tutti i dati puntati da res li metto nell'array list
-//			if(crs != null)
-//			{
-//				while(crs.moveToNext())
-//				{
-//					ElementoImageList elem = new ElementoImageList
-//							(crs.getString(crs.getColumnIndex("rifiuto_nome")),
-//									crs.getInt(crs.getColumnIndex("rifiuto_categoria")),
-//									crs.getString(crs.getColumnIndex("categoria_nome")),
-//									crs.getString(crs.getColumnIndex("categoria_modalita")),
-//									crs.getString(crs.getColumnIndex("categoria_colore")));
-//
-//					dati.add(elem);
-//				}
-//				crs.close();
-//			}
-//			//chiudo res e stat
-//			//res.close();
-//			//stat.close();
-//		}
-//
-//		catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//			return dati;
-//	}
+	public static ArrayList<ElementoImageList> queryRifiuti(Context context) {
+
+		Statement stat = null;
+		ArrayList<ElementoImageList> dati = new ArrayList<ElementoImageList>();
+		String query = "SELECT rifiuto_nome,rifiuto_categoria,categoria_nome,categoria_modalita,categoria_colore FROM (rifiuti JOIN categorie ON rifiuti.rifiuto_categoria=categorie.categoria_id) ORDER BY rifiuto_nome";
+
+		try {
+
+			//controlla se la connessione è chiusa: in tal caso, si riconnette
+			//if (conn.isClosed()){
+				//DBClass.getDBConnection(this);
+			//}
+
+			//creo lo statement in stat
+			//stat = conn.createStatement();
+
+			//eseguo lo statement e inserisco il risultato della query nel resultset
+			//ResultSet res = stat.executeQuery(query);
+			DBAsset dbHelper = new DBAsset(context, "differenziata.db", 1);
+
+			Cursor crs = dbHelper.query(query);
+
+			//tutti i dati puntati da res li metto nell'array list
+			if(crs != null)
+			{
+				while(crs.moveToNext())
+				{
+					ElementoImageList elem = new ElementoImageList
+							(crs.getString(crs.getColumnIndex("rifiuto_nome")),
+									crs.getInt(crs.getColumnIndex("rifiuto_categoria")),
+									crs.getString(crs.getColumnIndex("categoria_nome")),
+									crs.getString(crs.getColumnIndex("categoria_modalita")),
+									crs.getString(crs.getColumnIndex("categoria_colore")));
+
+					dati.add(elem);
+				}
+				crs.close();
+			}
+			//chiudo res e stat
+			//res.close();
+			//stat.close();
+		}
+
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+			return dati;
+	}
 //
 //	//QUERY per ricavare i dati della categoria "speciali" per l'activity "dove lo butto"
-//	public static ArrayList<ElementoImageList> querySpeciali(Context context) {
-//
-//		Statement stat = null;
-//		ArrayList<ElementoImageList> dati = new ArrayList<ElementoImageList>();
-//		String query = "SELECT speciale_categoria,categoria_sp_nome,speciale_indirizzo,speciale_latitudine,speciale_longitudine,speciale_descrizione,speciale_id FROM (categorie_speciali JOIN speciali ON categorie_speciali.categoria_sp_id = speciali.speciale_categoria)";
-//
-//		try {
-//			//controlla se la connessione è chiusa: in tal caso, si riconnette
-//			//if (conn.isClosed()){
-//			//	DBClass.getDBConnection();
-//			//}
-//			//creo lo statement in stat
-//			//stat = conn.createStatement();
-//			//eseguo lo statement e inserisco il risultato della query nel resultset
-//			//ResultSet res = stat.executeQuery(query);
-//
-//			DBAsset dbHelper = new DBAsset(context, "differenziata.db", 1);
-//
-//			Cursor crs = dbHelper.query(query);
-//
-//			//tutti i dati puntati da res li metto nell'array list
-//			if(crs != null) {
-//				while (crs.moveToNext()) {
-//					ElementoImageList elem = new ElementoImageList
-//							(crs.getString(crs.getColumnIndex("categoria_sp_nome")),
-//									crs.getInt(crs.getColumnIndex("speciale_categoria")),
-//									crs.getString(crs.getColumnIndex("speciale_indirizzo")),
-//									crs.getString(crs.getColumnIndex("speciale_latitudine")),
-//									crs.getString(crs.getColumnIndex("speciale_longitudine")),
-//									crs.getString(crs.getColumnIndex("speciale_descrizione")),
-//									crs.getInt(crs.getColumnIndex("speciale_id")));
-//					dati.add(elem);
-//				}
-//			}
-//			//chiudo res e stat
-//			//res.close();
-//			//stat.close();
-//		}
-//
-//		catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//
-//			return dati;
-//	}
+	public static ArrayList<ElementoImageList> querySpeciali(Context context) {
+
+		Statement stat = null;
+		ArrayList<ElementoImageList> dati = new ArrayList<ElementoImageList>();
+		String query = "SELECT speciale_categoria,categoria_sp_nome,speciale_indirizzo,speciale_latitudine,speciale_longitudine,speciale_descrizione,speciale_id FROM (categorie_speciali JOIN speciali ON categorie_speciali.categoria_sp_id = speciali.speciale_categoria)";
+
+		try {
+			//controlla se la connessione è chiusa: in tal caso, si riconnette
+			//if (conn.isClosed()){
+			//	DBClass.getDBConnection();
+			//}
+			//creo lo statement in stat
+			//stat = conn.createStatement();
+			//eseguo lo statement e inserisco il risultato della query nel resultset
+			//ResultSet res = stat.executeQuery(query);
+
+			DBAsset dbHelper = new DBAsset(context, "differenziata.db", 1);
+
+			Cursor crs = dbHelper.query(query);
+
+			//tutti i dati puntati da res li metto nell'array list
+			if(crs != null) {
+				while (crs.moveToNext()) {
+					ElementoImageList elem = new ElementoImageList
+							(crs.getString(crs.getColumnIndex("categoria_sp_nome")),
+									crs.getInt(crs.getColumnIndex("speciale_categoria")),
+									crs.getString(crs.getColumnIndex("speciale_indirizzo")),
+									crs.getString(crs.getColumnIndex("speciale_latitudine")),
+									crs.getString(crs.getColumnIndex("speciale_longitudine")),
+									crs.getString(crs.getColumnIndex("speciale_descrizione")),
+									crs.getInt(crs.getColumnIndex("speciale_id")));
+					dati.add(elem);
+				}
+			}
+			//chiudo res e stat
+			//res.close();
+			//stat.close();
+		}
+
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
+			return dati;
+	}
 	//QUERY per ricavare i dati della categoria "rifiuti" per l'activity "Calendario"
 	public static ArrayList<CategoriaDifferenziata> queryCalendario(Context context) {
 		

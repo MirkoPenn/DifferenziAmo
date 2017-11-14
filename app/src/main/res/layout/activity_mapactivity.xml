@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.differenziamo.MapActivity" >
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp"
+        class="com.google.android.gms.maps.MapFragment" />
+
+    <TextView
+        android:id="@+id/textView_indirizzo_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/map"
+        android:layout_alignParentTop="true"
+        android:text="@string/map_indirizzo"
+        android:textColor="@color/nero"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/textView_descrizione_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/map"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:text="@string/map_descrizione"
+        android:textColor="@color/gray"
+        android:textSize="13dp" />
+
+    <Button
+        android:id="@+id/button_tipomappa"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/map"
+        android:layout_alignTop="@+id/map"
+        android:text="@string/map_tipo"
+        android:onClick="changeType"
+        android:textSize="10dp" />
+
+</RelativeLayout>

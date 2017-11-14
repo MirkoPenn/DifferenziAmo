@@ -25,7 +25,34 @@
     <string name="calendario_oggi_puoi_buttare">Oggi puoi buttare:</string>
     <string name="calendario_categoria">Categoria</string>
     <string name="calendario_dove_puoi_buttare">Dove puoi buttare:</string>
+    <string name="lunedi">Lunedì</string>
+    <string name="martedi">Martedì</string>
+    <string name="mercoledi">Mercoledì</string>
+    <string name="giovedi">Giovedì</string>
+    <string name="venerdi">Venerdì</string>
+    <string name="sabato">Sabato</string>
+    <string name="domenica">Domenica</string>
 
+    <!--CALENDARIO SETTIMANA-->
+    <string name="calendario_settimana_title">Calendario settimanale</string>
+    <string name="calendario_settimana_istruzioni">METTI IL CONTENITORE FUORI DALLA TUA PROPRIETÀ LA SERA PRIMA DEL GIORNO INDICATO PER IL RITIRO</string>
+
+    <!--DOVE LO BUTTO-->
+    <string name="dovelobutto_cerca">Cerca rifiuto...</string>
+
+    <!--DOVE LO BUTTO - RIFIUTO -->
+    <string name="dovelobutto_rifiuto_title">Dove lo butto?</string>
+
+    <!--DOVE SI TROVA-->
+
+    <!--DOVE SI TROVA CATEGORIA-->
+    <string name="dovesitrova_categoria_title">Dove si trova?</string>
+
+    <!--MAPPA-->
+    <string name="map_title">Dove si trova?</string>
+    <string name="map_indirizzo">Indirizzo</string>
+    <string name="map_descrizione">Descrizione</string>
+    <string name="map_tipo">TIPO MAPPA</string>
 
 
 </resources>

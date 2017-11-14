@@ -24,6 +24,30 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".CalendarioSettimanaActivity"
+            android:label="@string/calendario_settimana_title"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".DoveLoButtoRifiutoActivity"
+            android:label="@string/dovelobutto_rifiuto_title"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".DoveSiTrovaCategoriaActivity"
+            android:label="@string/dovesitrova_categoria_title"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".MapActivity"
+            android:label="@string/map_title"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
     </application>
 
 </manifest>
