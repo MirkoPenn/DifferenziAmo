@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:layout_marginTop="1dp"
     android:gravity="center_horizontal"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -11,118 +12,64 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.differenziamo.MainActivity" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView_date"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:orientation="horizontal" >
+        android:text="@string/calendario_data"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/imageView_categoria2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:gravity="center" />
+            android:layout_weight="1" />
 
         <ImageView
             android:id="@+id/imageView_categoria3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:gravity="center" />
+            android:layout_weight="1" />
 
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:orientation="horizontal" >
 
         <ImageView
             android:id="@+id/imageView_categoria1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
-            android:layout_weight="1.40"
-            android:gravity="center"
-            android:scaleType="fitCenter" />
+            android:layout_width="256dp"
+            android:layout_height="256dp"/>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal" >
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/calendario_data"
-        android:textColor="@color/black"
-        android:textSize="30dp" />
-
-    <Button
-        android:id="@+id/button_calendario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="1dp"
-        android:onClick="onClickCalendarioSettimana"
-        android:visibility="invisible"
-        android:text="@string/calendario_button"
-        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/textView_oggipuoibuttare"
+        android:paddingTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button_calendario"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="150dp"
         android:text="@string/calendario_oggi_puoi_buttare"
         android:textColor="@color/black"
-        android:textSize="16dp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textView_categoria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button_calendario"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
         android:text="@string/calendario_categoria"
         android:textColor="@color/black"
-        android:textSize="22dp" />
+        android:textSize="22sp" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="match_parent"
+
+    <TextView
+        android:id="@+id/textView_dovepuoibuttare"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button_calendario"
-        android:layout_marginTop="275dp"
-        android:orientation="horizontal" >
+        android:text="@string/calendario_dove_puoi_buttare"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/textView_dovepuoibuttare"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/button_calendario"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="35dp"
-            android:text="@string/calendario_dove_puoi_buttare"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
-
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>

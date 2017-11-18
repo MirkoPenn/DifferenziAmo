@@ -52,7 +52,7 @@ public class AlarmBroadcastReceiver extends BroadcastReceiver {
 			  //viene modificato l'aspetto della notifica (testo, logo, suono)
 			  NotificationCompat.Builder mBuilder =
 			  new NotificationCompat.Builder(context)
-			  .setSmallIcon(R.mipmap.ic_launcher)																	//logo piccolo della notifica
+			  .setSmallIcon(R.drawable.differenziamo)																	//logo piccolo della notifica
 			  .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher))			//logo grande della notifica
 		      .setContentTitle("DifferenziAmo")															//titolo della notifica
 			  .setContentText("Ricorda di mettere il contenitore fuori dalla tua proprietà!")						//testo della notifica
@@ -68,7 +68,7 @@ public class AlarmBroadcastReceiver extends BroadcastReceiver {
 			 {
 			  NotificationCompat.Builder mBuilder =
 			  new NotificationCompat.Builder(context)
-			  .setSmallIcon(R.mipmap.ic_launcher)																	//logo piccolo della notifica
+			  .setSmallIcon(R.drawable.differenziamo)																	//logo piccolo della notifica
 			  .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher))			//logo grande della notifica
 			  .setContentTitle("DifferenziAmo")															//titolo della notifica
 		      .setContentText("Ricorda di mettere il contenitore fuori dalla tua proprietà!")						//testo della notifica

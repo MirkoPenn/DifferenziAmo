@@ -75,6 +75,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
+    protected void onResume() {
+        // TODO Auto-generated method stub
+        super.onResume();
+        Utils.Log("Resume");
+        this.setAlarm();
+    }
+
+    @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
