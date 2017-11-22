@@ -44,7 +44,7 @@
         <TableLayout
             android:id="@+id/table_layout1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="50dp" >
         </TableLayout>
 
         <TextView
@@ -63,7 +63,7 @@
         <TableLayout
             android:id="@+id/table_layout2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="50dp" >
         </TableLayout>
 
         <TextView
@@ -81,7 +81,7 @@
         <TableLayout
             android:id="@+id/table_layout3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="50dp" >
         </TableLayout>
 
         <TextView
@@ -99,7 +99,7 @@
         <TableLayout
             android:id="@+id/table_layout4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="50dp" >
         </TableLayout>
 
         <TextView
@@ -117,7 +117,7 @@
         <TableLayout
             android:id="@+id/table_layout5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="50dp" >
         </TableLayout>
 
         <TextView
@@ -135,7 +135,7 @@
         <TableLayout
             android:id="@+id/table_layout6"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="50dp" >
         </TableLayout>
 
         <TextView
@@ -153,7 +153,7 @@
         <TableLayout
             android:id="@+id/table_layout7"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="50dp" >
         </TableLayout>
     </LinearLayout>
 </ScrollView>

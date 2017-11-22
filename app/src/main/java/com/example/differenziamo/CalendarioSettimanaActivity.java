@@ -9,6 +9,7 @@ import android.os.StrictMode;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -71,7 +72,7 @@ public class CalendarioSettimanaActivity extends Activity {
 	              tv1.setMaxWidth((int)(display.getWidth()*0.68));
 	              TextView spazio = new TextView(this);
 	              spazio.setText("  ");
-	              tbrow.addView(iv1);
+                  tbrow.addView(iv1);
 	              tbrow.addView(spazio);
 	              tbrow.addView(tv1);
 	              stk.addView(tbrow);
@@ -104,6 +105,7 @@ public class CalendarioSettimanaActivity extends Activity {
 				  TableRow tbrow = new TableRow(this);
 	              ImageView iv1 = new ImageView(this);
 	              iv1.setImageResource(getResources().getIdentifier("logo_cat_"+i.getIdCategoria(), "drawable", getPackageName()));
+
 	              TextView tv1 = new TextView(this);
 	              tv1.setText(i.getNome());
 	              tv1.setTextColor(Color.BLACK);

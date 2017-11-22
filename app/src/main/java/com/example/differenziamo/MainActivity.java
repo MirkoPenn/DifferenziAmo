@@ -182,9 +182,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.nav_impostazioni) {
 
+            fragment = new ImpostazioniFragment();
+            mTitle = getString(R.string.a_impostazioni);
+
+            // remove button
+            fab.setVisibility(View.INVISIBLE);
+
+            // set the right onItemClick function
+            onItemClickMethod = R.string.a_impostazioni;
+
         } else if (id == R.id.nav_faq) {
 
-        } else if (id == R.id.nav_credits) {
+            fragment = new FaqFragment();
+            mTitle = getString(R.string.a_faq);
+
+            // remove button
+            fab.setVisibility(View.INVISIBLE);
+
+            // set the right onItemClick function
+            onItemClickMethod = R.string.a_faq;
 
         }
 
