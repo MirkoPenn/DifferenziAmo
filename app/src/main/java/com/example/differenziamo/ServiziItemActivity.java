@@ -1,30 +1,40 @@
 package com.example.differenziamo;
 
-import android.app.ActionBar;
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ServiziItemActivity extends Activity {
+public class ServiziItemActivity extends AppCompatActivity {
 	
 	int position; // è la posizione di ogni item nel ListView
+	String nomeServizio = null;
 
 	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_servizi_item);
-		
-		Intent i = getIntent();					  //recupero l'intent
+		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+		setSupportActionBar(toolbar);
+
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true); // tasto indietro
+
+		// ottengo l'intent
+		Intent i = getIntent();
+
+		// ricavo la stringa della categoria dal bundle e la setto come titolo
+		if (i.hasExtra("nomeServizio")) {
+			nomeServizio = i.getStringExtra("nomeServizio");
+			setTitle(nomeServizio);
+		} else {
+			nomeServizio = "Default";
+		}
+
 		position = i.getIntExtra("position", 0);  //prendo dall'intent la posizione degli item
 		
 		//recupero i TextView e l'ImageView dell'activity attraverso il loro id
@@ -79,7 +89,7 @@ public class ServiziItemActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_servizi_item_drawer, menu);
+		getMenuInflater().inflate(R.menu.servizi_item_drawer, menu);
 		return true;
 	}
 

@@ -1,10 +1,11 @@
 package com.example.differenziamo;
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,7 +21,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 
-public class MapActivity extends Activity {
+public class MapActivity extends AppCompatActivity {
 
 	String latitudine;
 	String longitudine;
@@ -32,14 +33,30 @@ public class MapActivity extends Activity {
 	private GoogleMap map;
 	@SuppressWarnings("unused")
 	private Button tipoMappa;
+	private String nomeSpeciale = null;
 	
 	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_map);
-		
-		Intent i = getIntent();								//catturo l'intent proveniente dall'activity "DoveSiTrovaCategoria"
+		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+		setSupportActionBar(toolbar);
+
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true); // tasto indietro
+
+		// ottengo l'intent
+		Intent i = getIntent();
+
+		// ricavo la stringa della categoria dal bundle e la setto come titolo
+		if (i.hasExtra("nomeServizio")) {
+			nomeSpeciale = i.getStringExtra("nomeServizio");
+			setTitle(nomeSpeciale);
+		} else {
+			nomeSpeciale = "Default";
+		}
+
+		//ottengo le altre info dall'intent per la mappa
 		latitudine = i.getStringExtra("latitudine");		//prendo il valore della latitudine
 		descrizione = i.getStringExtra("descrizione");		//prendo la descrizione
 		longitudine = i.getStringExtra("longitudine");		//prendo il valore della longitudine
@@ -84,7 +101,7 @@ public class MapActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_map_drawer, menu);
+		getMenuInflater().inflate(R.menu.map_drawer, menu);
 		return true;
 	}
 

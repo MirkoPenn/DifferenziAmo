@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fab.setOnClickListener(new View.OnClickListener() {
             @Override
               public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), CalendarioSettimanaActivity.class);
+                Intent intent = new Intent(getApplicationContext(), CalendarioSettimanaleActivity.class);
                 startActivity(intent);
                 }
             });
@@ -249,9 +249,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case (R.string.a_dovesitrova):
 
+                String nome_speciale = ((ElementoImageList) parent.getItemAtPosition(position)).getNome();
                 Intent intentDoveSiTrova = new Intent(this, DoveSiTrovaCategoriaActivity.class); 	//creo un oggetto di tipo intent
                 Bundle bDoveSiTrova = new Bundle();
                 bDoveSiTrova.putInt("idCategoria", position+1);    //metto nel bundle l'idCategoria
+                bDoveSiTrova.putString("nomeServizio", nome_speciale);
                 intentDoveSiTrova.putExtras(bDoveSiTrova);
                 startActivity(intentDoveSiTrova);
 
@@ -260,9 +262,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case (R.string.a_servizi):
 
+                String nome_servizio = ((ElementoImageList) parent.getItemAtPosition(position)).getNome();
                 Intent intent = new Intent(this, ServiziItemActivity.class); 					//creo un oggetto intent
                 Bundle b = new Bundle();												//creo il bundle
                 b.putInt("position", position);											//metto la posizione degli item del ListView nel bundle
+                b.putString("nomeServizio", nome_servizio);                             // metto nel bundle il nome del servizio
                 intent.putExtras(b);													//metto il bundle nell'intent
                 startActivity(intent);
 

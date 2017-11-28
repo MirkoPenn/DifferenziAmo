@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.differenziamo">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -13,17 +13,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
-
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyBxM2MTcg9FY2o6DBhowLSnsf3Dor059To"/>
-
+            android:value="AIzaSyBxM2MTcg9FY2o6DBhowLSnsf3Dor059To" />
 
         <activity
             android:name=".SplashScreen"
@@ -36,49 +31,60 @@
             </intent-filter>
         </activity>
 
-
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
-            android:name=".CalendarioSettimanaActivity"
-            android:label="@string/calendario_settimana_title"
+            android:name=".CalendarioSettimanaleActivity"
+            android:label="@string/title_activity_calendario_settimanale"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.differenziamo.MainActivity" /></activity>
 
         <activity
             android:name=".DoveLoButtoRifiutoActivity"
             android:label="@string/dovelobutto_rifiuto_title"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.differenziamo.MainActivity" /></activity>
 
         <activity
             android:name=".DoveSiTrovaCategoriaActivity"
             android:label="@string/dovesitrova_categoria_title"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.differenziamo.MainActivity" /></activity>
 
         <activity
             android:name=".MapActivity"
             android:label="@string/map_title"
+            android:parentActivityName=".DoveSiTrovaCategoriaActivity"
             android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.differenziamo.DoveSiTrovaCategoriaActivity" /></activity>
 
         <activity
             android:name=".ServiziItemActivity"
             android:label="@string/servizi_item_title"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.differenziamo.MainActivity" /></activity>
 
-        <service android:name="AlarmBroadcastReceiver" >
-        </service>
+        <service android:name=".AlarmBroadcastReceiver"/>
 
-        <receiver android:name=".AlarmBroadcastReceiver" >
-        </receiver>
+        <receiver android:name=".AlarmBroadcastReceiver"/>
+
 
     </application>
 

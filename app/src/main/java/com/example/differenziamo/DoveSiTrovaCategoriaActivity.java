@@ -1,9 +1,10 @@
 package com.example.differenziamo;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,10 +20,10 @@ import com.example.differenziamo.database.DBClass;
 
 import java.util.ArrayList;
 
-public class DoveSiTrovaCategoriaActivity extends Activity
-implements OnItemClickListener {
+public class DoveSiTrovaCategoriaActivity extends AppCompatActivity implements OnItemClickListener {
 
 	private int idCategoria = 0;
+	private String nomeSpeciale = null;
 	private ArrayList<String[]> listaIndirizziDescrizioni = new ArrayList<String[]>();
 	private ArrayList<ElementoImageList> maps = new ArrayList<ElementoImageList>();
 	private ArrayList<ElementoImageList> queryResult = new ArrayList<ElementoImageList>();
@@ -31,6 +32,21 @@ implements OnItemClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dovesitrova_categoria);
+		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+		setSupportActionBar(toolbar);
+
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true); // tasto indietro
+
+		// ottengo l'intent
+		Intent intent = getIntent();
+
+		// ricavo la stringa della categoria dal bundle e la setto come titolo
+		if (intent.hasExtra("nomeServizio")) {
+			nomeSpeciale = getIntent().getStringExtra("nomeServizio");
+			setTitle(nomeSpeciale);
+		} else {
+			nomeSpeciale = "Default";
+		}
 
 		// ricavo l'idCategoria dal bundle
 		idCategoria = getIntent().getIntExtra("idCategoria", 0);
@@ -77,20 +93,20 @@ implements OnItemClickListener {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_dovesitrova_categoria_drawer, menu);
+		getMenuInflater().inflate(R.menu.dovesitrova_categoria_drawer, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-	    switch (item.getItemId()) {
-	    // Respond to the action bar's Up/Home button
-	    case android.R.id.home:
-	        //NavUtils.navigateUpFromSameTask(this);
-	    	this.onBackPressed();
-	        return true;
-	    }
-	    return super.onOptionsItemSelected(item);
+		switch (item.getItemId()) {
+			// Respond to the action bar's Up/Home button
+			case android.R.id.home:
+				//NavUtils.navigateUpFromSameTask(this);
+				this.onBackPressed();
+				return true;
+		}
+		return super.onOptionsItemSelected(item);
 	}
 	
 	@Override
@@ -110,6 +126,7 @@ implements OnItemClickListener {
 			b.putString("latitudine", latitudine); 						//metto nel bundle la latitudine
 			b.putString("longitudine", longitudine); 					//metto nel bundle la longitudine
 			b.putString("id_categoria", id_categoria);					//metto nel bundle l'id della categoria
+			b.putString("nomeServizio", nomeSpeciale);					//metto nel bundle il nome per il titolo
 			intent.putExtras(b);										//metto il bundle nell'intent
 			startActivity(intent);										//faccio partire l'intent
 			}

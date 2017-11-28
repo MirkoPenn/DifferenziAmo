@@ -1,17 +1,18 @@
 package com.example.differenziamo;
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 
-public class DoveLoButtoRifiutoActivity extends Activity {
+public class DoveLoButtoRifiutoActivity extends AppCompatActivity {
 
 	String nome_rifiuto;		//il nome del rifiuto scelto
 	int id_categoria_rifiuto; 	//l'id della categoria del rifiuto scelto, conservata nel bundle
@@ -22,8 +23,13 @@ public class DoveLoButtoRifiutoActivity extends Activity {
 	@SuppressWarnings({ "unchecked", "deprecation" })
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dovelobutto_rifiuto);
+		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+		setSupportActionBar(toolbar);
+
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true); // tasto indietro
 
 		Intent i = getIntent(); 											//recupero l'intent con cui è stata chiamata questa activity
 		nome_rifiuto = i.getStringExtra("nome_rifiuto");					//prendo dall'intent il nome del rifiuto
@@ -49,19 +55,19 @@ public class DoveLoButtoRifiutoActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_dovelobutto_rifiuto_drawer, menu);
+		getMenuInflater().inflate(R.menu.dovelobutto_rifiuto_drawer, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-	    switch (item.getItemId()) {
-	    // Respond to the action bar's Up/Home button
-	    case android.R.id.home:
-	        //NavUtils.navigateUpFromSameTask(this);
-	    	this.onBackPressed();
-	        return true;
-	    }
-	    return super.onOptionsItemSelected(item);
+		switch (item.getItemId()) {
+			// Respond to the action bar's Up/Home button
+			case android.R.id.home:
+				//NavUtils.navigateUpFromSameTask(this);
+				this.onBackPressed();
+				return true;
+		}
+		return super.onOptionsItemSelected(item);
 	}
 }

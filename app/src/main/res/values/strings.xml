@@ -62,7 +62,7 @@
     <string name="servizi_item_title">Servizio</string>
     <string name="che_cos_e">Che cos\'è\?</string>
     <string name="quali_rifiuti_puoi_conferire">Quali rifiuti puoi conferire?</string>
-<string name="quando_dove">Quando e dove?</string>
+    <string name="quando_dove">Quando e dove?</string>
 
     <string name="titolo_centri_raccolta">CENTRI DI RACCOLTA ITINERANTE</string>
     <string name="cosa_centri_raccolta">I Centri di Raccolta Itinerante (INGOMBRANTI E RAAE) sono delle piccole isole ecologiche per la raccolta dei rifiuti ingombranti e dei RAEE (rifiuti elettrici ed elettronici).\n
@@ -123,5 +123,6 @@ Le attività di compostaggio domestico, contribuiscono alla riduzione del totale
 dal lunedì al sabato dalle ore 07:00 alle 14:00
 nel cassone scarrabile posto nel parcheggio dell\'Impianto sportivo Stadio Giuseppe Leone,
 ubicato sulla strada Provinciale Pomigliano-Acerra.</string>
+    <string name="title_activity_calendario_settimanale">Calendario Settimanale</string>
 
 </resources>
