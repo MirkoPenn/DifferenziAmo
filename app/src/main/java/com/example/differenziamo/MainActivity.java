@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ArrayList<CategoriaDifferenziata> queryResult;
     private FloatingActionButton fab = null;
     private int onItemClickMethod = 0;
+    private int currentItemId;
 
 
     @Override
@@ -72,6 +73,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Fragment initialFragment = new HomeFragment();
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.content_main, initialFragment).commit();
+
+        // SET HOME AS THE CURRENTITEM FOR NAVIGATION
+        simulateItemSelection(R.id.nav_home);
+
     }
 
     @Override
@@ -114,12 +119,53 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return super.onOptionsItemSelected(item);
     }
 
+    public void simulateItemSelection (int id) {
+        // simulates call onNavigationItemSelected item selection with an ID
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        MenuItem menuItem = (MenuItem) navigationView.getMenu().findItem(id);
+        menuItem.setChecked(true);
+        onNavigationItemSelected(menuItem);
+
+    }
+
+    public void simulateItemChecking (int id){
+        // simulates checking/unchecking of item in case it was selected with simulateItemSelection
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        MenuItem currentMenuItem = (MenuItem)navigationView.getMenu().findItem(currentItemId);
+        currentMenuItem.setChecked(false);
+        MenuItem newMenuItem = (MenuItem)navigationView.getMenu().findItem(id);
+        newMenuItem.setChecked(true);
+
+        currentItemId = id;     // sets the current checked item Id to the new one, required to manually handle the checking
+
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
 
         int id = item.getItemId();
+
+        selectedItemId(id);         // sets the correct fragment
+
+        simulateItemChecking(id);   // forces checking manually to correctly handle back button / home buttons presses
+
+        return true;
+    }
+
+
+
+    public void selectedItemId (int id) {
+
+        // Handle navigation view item clicks here.
+
         Fragment fragment = null;
 
         // choose fragment based on selection
@@ -138,10 +184,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             // set button
             fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-              public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), CalendarioSettimanaleActivity.class);
-                startActivity(intent);
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getApplicationContext(), CalendarioSettimanaleActivity.class);
+                    startActivity(intent);
                 }
             });
             fab.setImageResource(R.drawable.ic_calendario_settimanale);
@@ -206,7 +252,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // change the content of the content_main Constraint Layout based on the chosen fragment class.
         FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_main, fragment).commit();
+        fragmentManager.beginTransaction().replace(R.id.content_main, fragment).addToBackStack(mTitle).commit();
 
         // change activity title
         setTitle(mTitle);
@@ -215,7 +261,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
 
-        return true;
     }
 
     @Override

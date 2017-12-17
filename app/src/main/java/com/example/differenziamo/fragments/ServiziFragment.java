@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.example.differenziamo.MainActivity;
 import com.example.differenziamo.R;
 import com.example.differenziamo.customobjects.ElementoImageList;
 import com.example.differenziamo.customobjects.ImageListAdapter;
@@ -72,6 +73,13 @@ public class ServiziFragment extends Fragment {
 
         //assegno all'activity stessa la gestione dell'evento OnItemClickListner
         serviziLV.setOnItemClickListener((AdapterView.OnItemClickListener) getActivity());
+    }
+
+
+    public void onResume() {
+        super.onResume();
+        getActivity().setTitle(R.string.a_servizi);
+        ((MainActivity) getActivity()).simulateItemChecking(R.id.nav_servizi);
     }
 
 }

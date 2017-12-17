@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.differenziamo.MainActivity;
 import com.example.differenziamo.R;
 import com.example.differenziamo.customobjects.CategoriaDifferenziata;
 import com.example.differenziamo.database.DBClass;
@@ -202,6 +203,12 @@ public class CalendarFragment extends Fragment {
         else{
             text2.setText("puoi gettare i rifiuti nella "+busta1+" e nella "+busta2+" e depositarli fuori la porta dalle 20 alle 24.");
         }
+    }
+
+    public void onResume() {
+        super.onResume();
+        getActivity().setTitle(R.string.a_calendario);
+        ((MainActivity) getActivity()).simulateItemChecking(R.id.nav_calendario);
     }
 
 }

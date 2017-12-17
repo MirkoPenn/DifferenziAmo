@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.differenziamo.MainActivity;
 import com.example.differenziamo.R;
 
 public class FaqFragment extends Fragment {
@@ -22,6 +23,12 @@ public class FaqFragment extends Fragment {
 
         return rootView;
 
+    }
+
+    public void onResume() {
+        super.onResume();
+        getActivity().setTitle(R.string.a_faq);
+        ((MainActivity) getActivity()).simulateItemChecking(R.id.nav_faq);
     }
     
 
