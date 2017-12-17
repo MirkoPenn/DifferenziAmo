@@ -204,8 +204,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             // set the right onItemClick function
             onItemClickMethod = R.string.a_dovelobutto;
 
-            //heyyyyyyy
-
         } else if (id == R.id.nav_dovesitrova) {
 
             fragment = new DoveSiTrovaFragment();
