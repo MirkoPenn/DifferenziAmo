@@ -51,11 +51,11 @@ public class ServiziFragment extends Fragment {
 
         //dal momento che questa sezione non interagisce con il DB, lavoro da stringhe per settare la lista
         //definisco un vettore di stringhe che conterrà i nomi degli item della list view
-        String[] nomiServizi = new String[] {"Centri di raccolta itinerante",
-                "Isole ecologiche","Servizio di conferimento di sfalci e potature"};
+        String[] nomiServizi = new String[] {"Ritiro ingombranti",
+                "Isole ecologiche","Ecopunti mobili", "Raccolta abiti usati", "Oli vegetali esausti", "Autocompostaggio"};
         //definisco un vettore di stringhe che conterrà i path dei loghi degli item della list view
-        String[] pathServizi = new String[] {"logo_sp_3",
-                "logo_sp_2","logo_sfalci_potature"};
+        String[] pathServizi = new String[] {"ic_ingombranti",
+                "ic_isole_ecologiche","ic_ecopunti", "ic_raccolta_abiti", "ic_oli", "ic_autocompostaggio"};
 
         //definisco un ArrayList di ElementoLista
         ArrayList<ElementoImageList> sorgenteListaServizi = new ArrayList<ElementoImageList>();

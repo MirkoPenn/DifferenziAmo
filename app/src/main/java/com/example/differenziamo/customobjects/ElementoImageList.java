@@ -34,7 +34,7 @@ public class ElementoImageList implements Serializable{
 	public ElementoImageList(String nome, int id_categoria, String indirizzo, String latitudine, String longitudine, String descrizione, int id_speciale){
 		nomeElemento = nome;
 		id_categoriaElemento = id_categoria;
-		pathLogoElemento = "logo_sp_"+id_categoria;
+		pathLogoElemento = "ic_sp_"+id_categoria;
 		indirizzoElemento = indirizzo;
 		latitudineElemento = latitudine;
 		longitudineElemento = longitudine;

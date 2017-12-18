@@ -151,11 +151,11 @@ public class ImageListAdapter extends BaseAdapter {
 //		else if (tipo==TIPO_SPECIALI)
 //			switch (elem.getIdCategoria()){
 //				case 1:
-//					return R.drawable.logo_sp_1;
+//					return R.drawable.ic_sp_1;
 //				case 2: 
-//					return R.drawable.logo_sp_2;
+//					return R.drawable.ic_sp_2;
 //				case 3:
-//					return R.drawable.logo_sp_3;
+//					return R.drawable.ic_sp_3;
 //				default:
 //					return R.drawable.thumbnail;
 //				}

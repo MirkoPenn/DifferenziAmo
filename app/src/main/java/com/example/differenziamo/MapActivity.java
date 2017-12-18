@@ -3,6 +3,8 @@ package com.example.differenziamo;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -19,6 +21,10 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 
 public class MapActivity extends AppCompatActivity {
@@ -38,6 +44,7 @@ public class MapActivity extends AppCompatActivity {
 	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_map);
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -57,15 +64,49 @@ public class MapActivity extends AppCompatActivity {
 		}
 
 		//ottengo le altre info dall'intent per la mappa
-		latitudine = i.getStringExtra("latitudine");		//prendo il valore della latitudine
-		descrizione = i.getStringExtra("descrizione");		//prendo la descrizione
-		longitudine = i.getStringExtra("longitudine");		//prendo il valore della longitudine
 		id_categoria = i.getStringExtra("id_categoria");	//prendo l'id della categoria
-		nome_img = "mappa_sp_"+id_categoria;				//per stampare il segnalino corretto sulla mappa
-		Float lat= Float.parseFloat(latitudine);			//poich? latitudine e longitudine sono stati memorizzati nel db come stringhe, qui le convertiamo in float
-		Float lon= Float.parseFloat(longitudine);
-		indMap = new LatLng(lat, lon);						//l'indirizzo ? dato dall'insieme di latitudine e longitudine
+		latitudine = i.getStringExtra("latitudine");		//prendo il valore della latitudine
+		longitudine = i.getStringExtra("longitudine");		//prendo il valore della longitudine
+		descrizione = i.getStringExtra("descrizione");		//prendo la descrizione
 		indirizzo = i.getStringExtra("indirizzo");			//prendo anche l'indirizzo
+		nome_img = "mappa_sp_"+id_categoria;				//per stampare il segnalino corretto sulla mappa
+
+		double lat = 0;
+		double lon = 0;
+
+		if (latitudine.compareTo("0") == 0 && longitudine.compareTo("0") == 0) {
+
+			// se nel DB non abbiamo settato le coordinate, faremo in modo da ricavarle automaticamente dall'indirizzo
+
+			Geocoder geocoder = new Geocoder(this, Locale.ITALY);
+			List<Address> addresses = null;
+
+			try {
+				addresses = geocoder.getFromLocationName(indirizzo + ", Napoli", 1);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+			if (addresses.size() > 0) {
+				System.out.println(addresses.get(0).getUrl());
+				lat = addresses.get(0).getLatitude();
+				lon = addresses.get(0).getLongitude();
+			} else {
+				lat = 0;
+				lon = 0;
+			}
+
+		} else {
+				// poiche' latitudine e longitudine sono stati memorizzati nel db come stringhe, qui le convertiamo in float
+				lat = Float.parseFloat(latitudine);
+				lon = Float.parseFloat(longitudine);
+		}
+
+
+		System.out.println("indirizzo: '"+indirizzo+", Napoli'"+", latitudine: "+lat+", longitudine: "+lon);
+
+
+		indMap = new LatLng(lat, lon);						//l'indirizzo e' dato dall'insieme di latitudine e longitudine
 		Typeface myTypeface = Typeface.createFromAsset(this.getAssets(),"fonts/San Francisco Regular.ttf"); //imposto il font San Francisco contenuto nella cartella assets/fonts
 		TextView address = (TextView) findViewById(R.id.textView_indirizzo_map);
 		TextView description = (TextView) findViewById(R.id.textView_descrizione_map);

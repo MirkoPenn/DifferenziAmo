@@ -21,6 +21,10 @@
 
     <string name="action_settings">Settings</string>
 
+    <!--HOME-->
+    <string name="welcome_text">Benvenuto in DifferenziAmo! Scegli una sezione o usa il menù a sinistra per iniziare.</string>
+
+
     <!--CALENDARIO-->
     <string name="calendario_data">Data</string>
     <string name="calendario_button">Vai al calendario completo</string>
@@ -36,6 +40,7 @@
     <string name="domenica">Domenica</string>
 
     <!--CALENDARIO SETTIMANA-->
+    <string name="title_activity_calendario_settimanale">Calendario Settimanale</string>
     <string name="calendario_settimana_title">Calendario settimanale</string>
     <string name="calendario_settimana_istruzioni">METTI IL CONTENITORE FUORI DALLA TUA PROPRIETÀ LA SERA PRIMA DEL GIORNO INDICATO PER IL RITIRO</string>
 
@@ -64,66 +69,141 @@
     <string name="quali_rifiuti_puoi_conferire">Quali rifiuti puoi conferire?</string>
     <string name="quando_dove">Quando e dove?</string>
 
-    <string name="titolo_centri_raccolta">CENTRI DI RACCOLTA ITINERANTE</string>
-    <string name="cosa_centri_raccolta">I Centri di Raccolta Itinerante (INGOMBRANTI E RAAE) sono delle piccole isole ecologiche per la raccolta dei rifiuti ingombranti e dei RAEE (rifiuti elettrici ed elettronici).\n
-Questo importante servizio per la città di Pomigliano d\'Arco crea una nuova modalità di deposito dei rifiuti che si affianca ai tradizionali servizi della ENAM.\n
-I centri di raccolta itineranti sono infatti composti da mezzi per la raccolta che possono essere posizionati facilmente.\n
-Ogni CRI è presidiato dal personale ENAM.\n</string>
-    <string name="rifiuti_centri_raccolta">La presenza itinerante del CRI nei vari quartieri di Pomigliano d\'Arco è una sperimentazione che ENAM insieme all\'Amministrazione Comunale vuole mettere in campo, allo scopo di sensibilizzare i cittadini alla raccolta differenziata dei rifiuti ingombranti.
-I cittadini potranno portare tanti tipi di materiali differenti, come ad esempio:\n\n
--Elettrodomestici (lavatrici, cucine, frigoriferi, televisori, ecc.)\n
--Ingombranti misti (poltrone, divani, soprammobili, ecc.)\n
--Ingombranti metallici (letti, reti da letto, scaffali, schedari, ecc.)\n
--Ingombranti di legno (mobili, scrivanie, tavoli, librerie, tavolini, letti, comodini, ecc.)\n</string>
-    <string name="quando_centri_raccolta">Il calendario degli spostamenti è mensile e prevede appuntamenti il lunedì ed il venerdi dalle 07:00 alle 12:00\n\n
--Primo lunedì del mese: Piazza Primavera\n
--Primo venerdì del mese: Via Giuseppe Mazzini 54\n
--Secondo lunedì del mese: Via Felice Cavallotti 56\n
--Secondo venerdì del mese: Via Roma 42\n
--Terzo lunedì del mese: Via S. Pietro 192\n
--Terzo venerdì del mese: Via Vittorio Tufano 1\n
--Quarto lunedì del mese: Via Roma 466\n
--Quarto venerdì del mese: Largo Salvatore de Falco
-</string>
+    <string name="titolo_ritiro_ingombranti">RITIRO INGOMBRANTI</string>
+    <string name="cosa_ritiro_ingombranti"> ASIA dà l’opportunità a tutti i cittadini di smaltire gratuitamente i <b>materiali ingombranti</b> che non rientrano nel normale circuito di raccolta materiali ingombranti sono particolarmente dannosi per l’ambiente e possono essere riciclati attraverso lavorazioni in carico ad ASIA.</string>
+    <string name="rifiuti_ritiro_ingombranti">Elettrodomestici (lavatrici, cucine, lavastoviglie, forni a microonde, frigoriferi, congelatori, computer, stampanti, scanner, telefoni cellulari e apparecchi elettronici di ogni genere), mobili (scrivanie, sedie, librerie, letti, reti, materassi, comodini, armadi, poltrone, divani, ecc.) ed altri oggetti voluminosi come biciclette, sci, ecc.</string>
+    <string name="quandodove_ritiro_ingombranti">Per usufruire del servizio gratuito di ritiro smaltimento ingombranti, è possibile contattare il Numero Verde ASIA <b>800.161010</b> (contattabile dal lunedì al venerdì dalle ore 08:00 alle ore 18:00 e il sabato dalle ore 09:00 alle ore 13:00) o prenotare il ritiro <b>online</b> sul sito www.asianapoli.it/ritiroIngombranti.\n
+        Il ritiro, che avverrà a piano strada, è previsto da lunedì al venerdì dalle ore  08:00 alle ore 18:00 e il sabato dalle ore 09:00 alle ore 13:00.\n
+        L’utente dovrà soltanto portare i materiali ingombranti (massimo 3 pezzi) su strada pubblica in un punto concordato, ed ASIA provvederà a recuperarli.</string>
 
     <string name="titolo_isole_ecologiche">ISOLE ECOLOGICHE</string>
-    <string name="cosa_isole_ecologiche">Le isole ecologiche sono aree opportunamente attrezzate e custodite, destinate al
-conferimento di frazioni recuperabili o soggette a smaltimenti particolari dei rifiuti urbani
-ed assimilati. Le isole ecologiche hanno come obiettivo l\'attività di raccolta
-mediante raggruppamento differenziato dei rifiuti per frazioni omogenee conferiti dai
-detentori per il trasporto agli impianti di recupero e trattamento nonché di promuovere,
-con l\'osservanza di criteri di economicità ed efficienza, sistemi tendenti al recupero dei
-rifiuti e di avviare ad idonee forme di smaltimento rifiuti urbani pericolosi. Le tipologie dei
-rifiuti che possono essere conferite presso le isole ecologiche sono stabilite dal
-Comune di Pomigliano d\'Arco.\n </string>
-    <string name="rifiuti_isole_ecologiche">Le isole ecologiche, anche sulla base alle eventuali specifiche autorizzazioni, sono idonee alla
-ricezione-stoccaggio dei seguenti rifiuti, suddivisi tra residui destinati al recupero e residui
-destinati allo smaltimento:\n
-a) Residui a recupero: legname, vetro, carta e cartoni, plastiche, rottami metallici,
-materiali inerti edili, beni durevoli, accumulatori, oli grassi vegetali, rifiuti ingombranti,
-suddivisi per tipologia, ecc.\n
-b) Residui a smaltimento: farmaci scaduti, pile esauste, rifiuti urbani pericolosi in genere,
-ecc.\n</string>
-    <string name="quando_isole_ecologiche">L\'isola ecologica di Pomigliano d\'Arco è situata in Via Gorizia 29.\n
-Essa sarà presidiata dal personale preposto dal lunedì al sabato dalle ore
-8.00 alle ore 14.00 mentre l\'accesso al pubblico sarà consentito dal lunedì al sabato dalle ore
-08.30 alle ore 12:30.</string>
+    <string name="cosa_isole_ecologiche">Le <b>Isole Ecologiche</b> consentono ai cittadini di smaltire gratuitamente rifiuti che non possono essere riciclati tramite il normale sistema di raccolta, come ingombranti, elettronici, elettrodomestici, etc. Solo i <b>residenti</b> nella città di Napoli possono portare i propri materiali alle isole ecologiche, anche con terzi muniti di deleghe e copia del documento del delegante.\n
+        Le isole ecologiche con sede fissa, strutturate in aree recintate, sorvegliate ed attrezzate con container o cisterne per la raccolta differenziata, si suddividono in isole ecologiche <b>complete</b> e <b>ridotte</b>, che differiscono tra loro per il tipo di materiale che l\'utente può smaltire.\n\n
+        Nelle <b>isole ecologiche complete</b> è possibile portare tutti i materiali previsti nell\'ambito dello smaltimento domestico.
+        Nelle <b>isole ecologiche ridotte</b>, invece, non è possibile portare determinate tipologie di materiali (ad esempio, batterie di auto o di moto, frigoriferi o condizionatori).
+        </string>
+    <string name="rifiuti_isole_ecologiche">In <b>tutte</b> le isole ecologiche è possibile conferire:\n\n
+        - Carta e Cartoncino;\n
+        - Farmaci;\n
+        - Grandi Elettrodomestici integri e non smontati (come lavatrice, forno, cucina, lavastoviglie, scaldabagno, ecc.);\n
+        - Imballaggi in Cartone;\n
+        - Imballaggi in Plastica e Metalli;\n
+        - Imballaggi in Vetro;\n
+        - Indumenti usati;\n
+        - Inerti (modesti quantitativi di materiali inerti di risulta provenienti da piccole ristrutturazioni domestiche, piatti, mattonelle, ceramiche e vasi di terracotta);\n
+        - Ingombranti (come mobili, divani, materassi, valigie, scaffalature, pedane, oggetti in legno, ferro, vetroresina e plastiche dure);\n
+        - Lastre e vetro camera;\n
+        - Oli Vegetali: olio da cucina;\n
+        - Piccoli Elettrodomestici integri e non smontati (come telefoni, orologi, computer stampanti, giocattoli a pila, plafoniere, videoregistratori, telecomandi e in generale qualsiasi apparecchio alimentato a pile o corrente diverso dalle altre categorie);\n
+        - Pile;\n
+        - Pneumatici (numero massimo 4 pneumatici conferiti da utenza domestica);\n
+        - Sfalci e Potature.\n\n
+        <b>Solo nelle isole ecologiche complete</b> (non ridotte) è possibile conferire:\n\n
+        - Accumulatori: come batterie esauste al piombo di auto, moto e barche;\n
+        - Frigoriferi e Condizionatori;\n
+        - Lampadine e neon: come tubi al neon, lampade alogene, lampade fluorescente, a vapori di mercurio, sodio e ioduri;\n
+        - Oli Minerali: olio motore di origine fai da te;\n
+        - Toner e Cartucce;\n
+        - TV e Monitor;\n
+        - Vernici e Solventi.\n\n
+        In tutte le isole ecologiche <b>non è possibile portare</b> amianto (in tutte le sue forme), gesso (come il cartongesso, i gessolini ed mattoni di gesso), bitume (come le guaine) e rifiuti indifferenziati. L\'amianto, il gesso e il bitume vanno smaltiti in proprio rivolgendosi a centri autorizzati, mentre i rifiuti indifferenziati tramite gli appositi cassonetti o il porta a porta.</string>
+    <string name="quandodove_isole_ecologiche">Le isole ecologiche complete disponibili sono situate in:\n\n
+        - Via Giovanni Antonio Campano - quartiere Piscinola;\n
+        - Via Saverio Gatto - quartiere Colli Aminei;\n
+        - Viale della Resistenza - quartiere Scampia;\n
+        - Via Emilio Salgari - quartiere Ponticelli;\n
+        - Via Nelson Mandela - quartiere Pianura (Polo Artigianale).\n\n
+        Le isole ecologiche ridotte disponibili sono situate in:\n\n
+        - Via Mastellone - Quartiere Barra;\n
+        - Via Arturo Labriola - Quartiere Fuorigrotta (Cinema MED);\n
+        - Via Vicinale Vallone di Miano - Quartiere Secondigliano;\n
+        - Viale Ponte della Maddalena - Quartiere Mercato;\n
+        - Via Arena alla Sanità - Quartiere Sanità.\n\n
+        Le isole ecologiche sono <b>aperte</b>:\n\n
+        - il Lunedì dalle 14 alle 19;\n
+        - da Martedì a Sabato dalle 8 alle 19;\n
+        - la Domenica dalle 8 alle 14.\n\n
+        <b>Solo</b> le isole in Via Arena alla Sanità e Via Nelson Mandela, invece, sono aperte dal Lunedì al Sabato dalle 14 alle 19.</string>
 
-    <string name="titolo_sfalci_potature">SERVIZIO DI CONFERIMENTO DI SFALCI E POTATURE</string>
-    <string name="cosa_sfalci_potature">Sfalci e ramaglie sono materiali che si possono recuperare.
-Gli scarti vegetali raccolti in modo differenziato e sottoposti ad una fermentazione controllata,
-possono essere trasformati in un particolare terriccio, chiamato compost, molto utile in agricoltura e nel giardinaggio.\n
-Le attività di compostaggio domestico, contribuiscono alla riduzione del totale di questi rifiuti.\n</string>
-    <string name="rifiuti_sfalci_potature"> -sfalci d\'erba\n
--potature siepi\n
--ramaglie\n
--foglie e terricci\n
--cortecce\n</string>
-    <string name="quando_sfalci_potature">Il conferimento di Sfalci e potature (VERDE) può essere effettuato
-dal lunedì al sabato dalle ore 07:00 alle 14:00
-nel cassone scarrabile posto nel parcheggio dell\'Impianto sportivo Stadio Giuseppe Leone,
-ubicato sulla strada Provinciale Pomigliano-Acerra.</string>
-    <string name="title_activity_calendario_settimanale">Calendario Settimanale</string>
-    <string name="welcome_text">Benvenuto in DifferenziAmo! Scegli una sezione o usa il menù a sinistra per iniziare.</string>
+    <string name="titolo_ecopunti_mobili">ECOPUNTI MOBILI</string>
+    <string name="cosa_ecopunti_mobili">Gli <b>ecopunti mobili</b> sono isole ecologiche mobili o itineranti, caratterizzate da un furgone attrezzato per la raccolta differenziata e l\'avvio al recupero di materiali elettrici ed elettronici (RAEE), ingombranti ed oli vegetali esausti, consegnati esclusivamente e gratuitamente da cittadini. Solo i <b>residenti</b> nella città di Napoli possono portare i propri materiali agli ecopunti, anche con terzi muniti di deleghe e copia del documento del delegante.\n
+        Essi si suddividono in ecopunti mobili <b>elettrodomestici</b>, ecopunti mobili <b>ingombranti</b> ed ecopunti mobili <b>oli vegetali esausti</b>, che differiscono per la tipologia di materiale che l\'utente può smaltire.</string>
+    <string name="rifiuti_ecopunti_mobili">Presso gli <b>ecopunti elettrodomestici</b> è possibile smaltire:\n\n
+        - Piccoli Elettrodomestici integri e non smontati (come telefoni, orologi, computer stampanti, giocattoli a pila, plafoniere, videoregistratori, telecomandi e in generale qualsiasi apparecchio alimentato a pile o corrente diverso dalle altre categorie);\n
+        - Pile;\n
+        - Toner e Cartucce;\n
+        - TV e Monitor.\n\n
+        Presso gli <b>ecopunti ingombranti</b> è possibile smaltire:\n\n
+        - Farmaci;\n
+        - Frigoriferi e condizionatori;\n
+        \- Ingombranti (come mobili, divani, materassi, valigie, scaffalature, pedane, oggetti in legno, ferro, vetroresina e plastiche dure)\n
+        - Lastre e vetro camera;\n
+        - Piccoli elettrodomestici integri e non smontati (come telefoni, orologi, computer stampanti, giocattoli a pila, plafoniere, videoregistratori, telecomandi e in generale qualsiasi apparecchio alimentato a pile o corrente diverso dalle altre categorie).\n\n
+        Presso gli <b>ecopunti oli vegetali esausti</b> è possibile smaltire l\'olio vegetale esausto derivante da uso domestico e opportunamente raccolto tramite una comune bottiglia (in plastica o vetro).</string>
+    <string name="quandodove_ecopunti_mobili">Gli <b>ecopunti elettrodomestici</b> sono situati in:\n\n
+        - Piazza Vittoria - quartiere Chiaia (il Lunedì dalle ore 09:00 alle 12:45);\n
+        - Piazza Amedeo - quartiere Chiaia (il Martedì dalle ore 09:00 alle 12:45);\n
+        - Piazza Trieste e Trento - quartiere San Ferdinando (il Mercoledì dalle ore 09:00 alle 12:45).\n
+        - Piazza Carità - quartiere Montecalvario (il Giovedì dalle ore 09:00 alle 12:45);\n
+        - Via Toledo (Metrò) - quartiere San Ferdinando (il Venerdì dalle ore 09:00 alle 12:45);\n
+        - Piazza Dante - quartiere Avvocata (il Sabato dalle ore 09:00 alle 12:45);\n\n
+        Gli <b>ecopunti ingombranti</b> sono situati in:\n\n
+        - Piazza Medaglia d\'Oro - quartiere Arenella (il Lunedì e Giovedì dalle ore 08:00 alle 12:45);\n
+        - Monte Rosa - quartiere Scampia, Piazza Libertà (il Lunedì dalle 08:00 alle 12:45)\n
+        - Via Onofrio Fragnito - Rione Alto (il Martedì dalle ore 08:00 alle 12:45);\n
+        - Via Don Pino Puglisi - quartiere Scampia (il Martedì dalle 08:00 alle 12:45)\n
+        - Via Cilea - quartiere Vomero, angolo via de Nardis (il Mercoledì dalle ore 08:00 alle 12:45);\n
+        - Piazza Tafuri - quartieri Piscinola (il Mercoledì dalle 08:00 alle 12:45);\n
+        - Rotonda dietro la Vigna - quartiere Marianella (il Giovedì dalle 08:00 alle 12:45);\n
+        - Viale Virgilio - quartiere Posillipo (il Venerdì dalle ore 08:00 alle 12:45);\n
+        - Rione 25/80 - quartiere Chiaiano, piazzale Scuola (il Venerdì dalle 08:00 alle 12:45);\n
+        - Via Luigia San Felice - quartiere Vomero, scale Via Donizetti (il 1° e il 3° Venerdì del Mese)\n
+        - Via Filippo Palizzi - quartiere Vomero, rotonda (il 2° e 4° Venerdì del mese).\n\n
+        Gli <b>ecopunti oli vegetali esausti</b> sono situati in:\n\n
+        - Piazza Vittoria - quartiere Chiaia (il Lunedì dalle ore 08:00 alle ore 10:30);\n
+        - Piazza Trieste e Trento - quartiere San Ferdinando (il Lunedì dalle ore 11:00 alle ore 14:30);\n
+        - Via Provinciale Napoli - Supermercato Sigma, quartiere Pianura (il Martedì dalle ore 08:00 alle ore 10:30);\n
+        - Via dell\'Epomeo - altezza Chiesa Montevergine, quartiere Soccavo (il Martedì dalle ore 11:00 alle ore 14:30);\n
+        - Piazza Amedeo - quartiere Chiaia (il Mercoledì dalle ore 08:00 alle ore 10:30);\n
+        - Piazza San Vitale - quartiere Fuorigrotta (il Mercoledì dalle ore 11:00 alle ore 14:30);\n
+        - Piazza Dante Alighieri - quartiere San Giuseppe (il Giovedì dalle ore 08:00 alle ore 10:30);\n
+        - Piazza San Domenico Maggiore - quartiere San Giuseppe (il Giovedì dalle ore 11:00 alle ore 14:30);\n
+        - Viale Virgilio - quartiere Posillipo (il Venerdì dalle ore 08:00 alle ore 10:30);\n
+        - Viale Campi Flegrei - quartiere Bagnoli (il Venerdì dalle ore 11:00 alle ore 14:30);\n
+        - Via Toledo - angolo Via Armando Diaz, quartiere San Giuseppe (il Sabato dalle ore 08:00 alle ore 10:30);\n
+        - Piazza Giovanni Bovio - quartiere Porto (il Sabato dalle ore 11:00 alle ore 14:30).
+    </string>
+
+    <string name="titolo_raccolta_abiti">RACCOLTA ABITI USATI</string>
+    <string name="cosa_raccolta_abiti">Raccogliere abiti usati è un contributo per l\'ambiente: infatti si stima che ogni anno ogni cittadino italiano si libera di 15/20 kg di indumenti usati che vanno ad aggiungersi alla quantità enorme di materiali che produciamo ogni giorno.\nCon la raccolta dedicata degli abiti usati possiamo fare si che questi vengano trattati e riciclati evitando così che finiscano nei cassonetti dell\'indifferenziato e smaltiti in discarica o negli inceneritori.</string>
+    <string name="rifiuti_raccolta_abiti">Abiti, borse, tende, scarpe appaiate, cappelli, coperte, biancheria, maglieria ed altri accessori tessili in buono stato.</string>
+    <string name="quandodove_raccolta_abiti">Gli indumenti usati devono essere depositati in buste ben chiuse nell\'apposito contenitore stradale: questo semplice gesto di raccolta permetterà il recupero di materia prima altrimenti inutilizzabile.\nNon abbandonare le buste colme di indumenti usati ai piedi dei contenitori grigi. La normativa informa che le buste lasciate a terra in prossimità dei contenitori sono da considerarsi materiali non riciclabili perché abbandonati.</string>
+
+    <string name="titolo_oli_esausti">OLI VEGETALI ESAUSTI</string>
+    <string name="cosa_oli_esausti"><b>L\'olio vegetale esausto da cucina</b> è un rifiuto che, se disperso nell\'ambiente, comporta gravi danni al sottosuolo, alle reti fognarie e alle falde acquifere.\nNon recuperare olio vegetale esausto ma buttarlo nel lavandino significa immetterlo nella rete fognaria, dove gli impianti di depurazione riescono a smaltirne solo una piccola quantità. La restante parte viene immessa direttamente in mare, causando gravi danni all\'ambiente marino e ai suoi abitanti, sia animali che vegetali.</string>
+        <string name="rifiuti_oli_esausti">Per la raccolta domestica degli oli, l\'utente può utilizzare una comune bottiglia (in plastica o vetro) oppure il <b>bidoncino</b> fornito <b>gratuitamente</b> da ASIA. Per la raccolta a bidoncini, l\'utente può portare il bidoncino pieno e ritirare quello vuoto e pulito presso uno dei punti di raccolta fissi disponibili. È possibile <b>ritirare</b> il primo bidoncino direttamente presso il punto di raccolta.</string>
+    <string name="quandodove_oli_esausti">Per lo <b>smaltimento</b> dell\'olio vegetale esausto derivato da uso domestico, è possibile conferirlo gratuitamente presso le cisterne presenti in tutte le <b>isole ecologiche</b>, sia complete che ridotte, in uno degli <b>ecopunti mobili oli vegetali esausti</b> o in uno dei seguenti punti di raccolta fissi:\n\n
+        - Parco Comola Ricci, 26 - quartiere Chiaia;\n
+        - Parco Comola Ricci, 40 - quartiere Chiaia;\n
+        - Via Coroglio, 90 - Circolo Ilva, quartiere Bagnoli;\n
+        - Via Metastasio (mercato) - quartiere Fuorigrotta.\n\n
+        Per la raccolta a <b>bidoncini</b>, invece, è possibile consegnare i contenitori pieni e ritirare quelli vuoti e puliti presso i seguenti punti di raccolta:\n\n
+        - Corso Arnaldo Lucci, 9 (Supermercato Conad - quartiere Mercato);\n
+        - Traversa Seconda detta Divisione Siena (Supermercato Conad - quartiere Fuorigrotta).\n\n
+        Per rendere il servizio più comodo e capillare, è possibile anche richiedere l\'<b>installazione</b> gratuita di un contenitore presso il <b>proprio</b> condominio, parco, stabile, attività commerciale, centro commerciale, istituto o plesso scolastico, ecc. La richiesta può avvenire tramite il numero verde di ASIA 800-161010 oppure inviando una mail a info@asianapoli.it, specificando il nome della struttura, l\'indirizzo, il quartiere, il nominativo del richiedente e il ruolo che occupa nella struttura (Amministratore di condominio, Amministratore delle aree comuni, responsabile, ecc).\n Alla richiesta seguirà un sopralluogo tecnico, gratuito e senza impegno, per determinare le dimensioni del contenitore da installare, funzione sia del numero di utenti residenti o che frequentano la struttura, sia dell\'ampiezza degli spazi preposti ad ospitarlo. Una volta effettuata l\'installazione, agli utenti verrà consegnato il bidoncino per la raccolta dell\'olio domestico durante un\'attività di sensibilizzazione. Il prelievo avverrà a scadenza programmata oppure su specifica segnalazione prima del riempimento completo.</string>
+
+    <string name="titolo_autocompostaggio">AUTOCOMPOSTAGGIO</string>
+    <string name="cosa_autocompostaggio">Il <b>compostaggio</b> è una tecnica attraverso la quale viene controllato e accelerato il processo naturale a cui va incontro qualsiasi sostanza organica per effetto della flora microbica presente nell\'ambiente. ll processo, applicato a rifiuti preselezionati (quali la frazione organica dei rifiuti urbani raccolta in maniera differenziata o i residui organici delle attività agricola), porta alla produzione di un ammendante noto come "compost di qualità". Esso trova impiego in agricoltura e nel florovivaismo in quanto, oltre ad essere un\'ottima fonte di sostanza organica per il terreno, ne migliora i caratteri fisici, chimici e biologici. Questo può essere ottenuto collettivamente in grandi impianti appositamente attrezzati e adibiti al trattamento giornaliero di notevoli quantità di materiale o, nel caso dell\'autocompostaggio, in ambito domestico per smaltire autonomamente i rifiuti organici familiari.\nL’<b>autocompostaggio</b> è realizzabile da ogni nucleo familiare che disponga o di uno spazio libero (giardino, orto) dove porre il cumulo o di una compostiera, ossia un contenitore aerato appositamente studiato per fare il compostaggio. Il compostaggio domestico se attuato in modo sistematico in una comunità, consente immediatamente di ridurre il volume dei rifiuti da smaltire ed eliminare gli odori dai cassonetti dei rifiuti.\nIl <b>Comune di Napoli</b> promuove, attiva, supporta e controlla sul proprio territorio il compostaggio domestico della frazione verde organica quale buona pratica per la riduzione dei materiali biodegradabili finalizzata al loro recupero e trasformazione in compost da riutilizzare come fertilizzante nel proprio giardino, orto, o terreno e nell’attività di giardinaggio in generale, a cura delle utenze domestiche o non domestiche. Lo stesso Comune di Napoli ha predisposto il <b>regolamento comunale</b> per la riscossione della tassa/tariffa, prevedendo sconti/riduzioni per i cittadini aderenti alla pratica del compostaggio domestico.</string>
+    <string name="rifiuti_autocompostaggio">Le materie prime del compost sono:\n\n
+        - avanzi di cucina (residui di pulizia delle verdure, bucce, pelli, fondi di the e caffè, gusci di uova frantumati, avanzi);\n
+        - gli scarti del giardino e dell’orto (potature, foglie secche, fiori appassiti, gambi, erba);\n
+        - carta non patinata;\n
+        - cartone e trucioli di legno non trattato.\n\n
+        Attenzione con gli scarti di potatura, poiché esistono piante resistenti alla degradazione (magnolia, lauroceraso, noce, castagno, aghi di conifere) che nel composter vanno miscelate bene con i materiali più facilmente degradabili.\nInadatti al compostaggio sono la carta patinata, il legno verniciato e tutti i rfiuti non elencati sopra.</string>
+    <string name="quandodove_autocompostaggio">La domanda di adesione al compostaggio domestico deve essere presentata entro il 30 giugno di ogni anno per usufruire della riduzione tariffaria per l\'anno di presentazione. Le domande presentate oltre tale data saranno valide ai fini della riduzione tariffaria per l\'anno successivo.\n
+        La domanda di adesione al compostaggio va presentata all\'ufficio "Servizio Igiene e Decoro della città" del Comune di Napoli. Alla domanda di adesione al compostaggio va allegata copia di un documento di riconoscimento valido del richiedente. La richiesta di assegnazione della compostiera domestica deve essere presentata ad ASIA Napoli utilizzando il modello scaricabile.\n
+        Per la modulistica, consultare il sito www.asianapoli.it/servizi/cos-e-l-autocompostaggio/richiedi-la-compostiera-domestica.html
+</string>
+
 
 </resources>

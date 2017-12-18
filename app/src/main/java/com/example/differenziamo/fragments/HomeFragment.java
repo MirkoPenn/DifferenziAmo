@@ -55,7 +55,7 @@ public class HomeFragment extends Fragment {
 
     public void onResume() {
         super.onResume();
-        getActivity().setTitle(R.string.a_home);
+        getActivity().setTitle(R.string.app_name);
         ((MainActivity) getActivity()).simulateItemChecking(R.id.nav_home);
     }
 

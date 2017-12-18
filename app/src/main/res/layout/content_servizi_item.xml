@@ -27,6 +27,7 @@
 
             <TextView
                 android:id="@+id/textView_titoloServizio"
+                android:autoLink="all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -37,11 +38,13 @@
 
             <ImageView
                 android:id="@+id/imageView_servizio"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_margin="20dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/logo_missing" />
+                android:src="@drawable/immagine_ingombranti" />
 
             <TextView
                 android:id="@+id/textView_titolo_cosa_e"
@@ -54,6 +57,7 @@
 
             <TextView
                 android:id="@+id/textView_cosa_e"
+                android:autoLink="all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
@@ -72,6 +76,7 @@
 
             <TextView
                 android:id="@+id/textView_rifiuto_conferire"
+                android:autoLink="all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
@@ -90,6 +95,7 @@
 
             <TextView
                 android:id="@+id/textView_quando"
+                android:autoLink="all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"

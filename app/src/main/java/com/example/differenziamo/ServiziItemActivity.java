@@ -51,38 +51,74 @@ public class ServiziItemActivity extends AppCompatActivity {
 		//usando delle funzioni che mi permettono di settare i textView e l'ImageView dell'activity
 		switch (position) { 
 		case 0:
-			titolo_servizio.setText(R.string.titolo_centri_raccolta);
-			titolo_servizio.setTextColor(getResources().getColor(R.color.green));
-			immagine_servizio.setImageResource(getResources().getIdentifier("immagine_sp_3", "drawable", getPackageName()));
-			titolo_cosa_e.setTextColor(getResources().getColor(R.color.green));
-			cosa_e.setText(R.string.cosa_centri_raccolta);
-			titolo_rifiuto_conferire.setTextColor(getResources().getColor(R.color.green));
-			rifiuto_conferire.setText(R.string.rifiuti_centri_raccolta);
-			titolo_quando.setTextColor(getResources().getColor(R.color.green));
-			quando.setText(R.string.quando_centri_raccolta);
+			titolo_servizio.setText(R.string.titolo_ritiro_ingombranti);
+			titolo_servizio.setTextColor(getResources().getColor(R.color.colorPrimary));
+			immagine_servizio.setImageResource(getResources().getIdentifier("immagine_ingombranti", "drawable", getPackageName()));
+			titolo_cosa_e.setTextColor(getResources().getColor(R.color.colorPrimary));
+			cosa_e.setText(R.string.cosa_ritiro_ingombranti);
+			titolo_rifiuto_conferire.setTextColor(getResources().getColor(R.color.colorPrimary));
+			rifiuto_conferire.setText(R.string.rifiuti_ritiro_ingombranti);
+			titolo_quando.setTextColor(getResources().getColor(R.color.colorPrimary));
+			quando.setText(R.string.quandodove_ritiro_ingombranti);
 			break;
 		case 1:
 			titolo_servizio.setText(R.string.titolo_isole_ecologiche);
-			titolo_servizio.setTextColor(getResources().getColor(R.color.blue));
-			immagine_servizio.setImageResource(getResources().getIdentifier("immagine_sp_2", "drawable", getPackageName()));
-			titolo_cosa_e.setTextColor(getResources().getColor(R.color.blue));
+			titolo_servizio.setTextColor(getResources().getColor(R.color.colorPrimary));
+			immagine_servizio.setImageResource(getResources().getIdentifier("immagine_isole_ecologiche", "drawable", getPackageName()));
+			titolo_cosa_e.setTextColor(getResources().getColor(R.color.colorPrimary));
 			cosa_e.setText(R.string.cosa_isole_ecologiche);
-			titolo_rifiuto_conferire.setTextColor(getResources().getColor(R.color.blue));
+			titolo_rifiuto_conferire.setTextColor(getResources().getColor(R.color.colorPrimary));
 			rifiuto_conferire.setText(R.string.rifiuti_isole_ecologiche);
-			titolo_quando.setTextColor(getResources().getColor(R.color.blue));
-			quando.setText(R.string.quando_isole_ecologiche);
+			titolo_quando.setTextColor(getResources().getColor(R.color.colorPrimary));
+			quando.setText(R.string.quandodove_isole_ecologiche);
 			break;
 		case 2:
-			titolo_servizio.setText(R.string.titolo_sfalci_potature);
-			titolo_servizio.setTextColor(getResources().getColor(R.color.red));
-			immagine_servizio.setImageResource(getResources().getIdentifier("immagine_sfalci_potature", "drawable", getPackageName()));
-			titolo_cosa_e.setTextColor(getResources().getColor(R.color.red));
-			cosa_e.setText(R.string.cosa_sfalci_potature);
-			titolo_rifiuto_conferire.setTextColor(getResources().getColor(R.color.red));
-			rifiuto_conferire.setText(R.string.rifiuti_sfalci_potature);
-			titolo_quando.setTextColor(getResources().getColor(R.color.red));
-			quando.setText(R.string.quando_sfalci_potature);
+			titolo_servizio.setText(R.string.titolo_ecopunti_mobili);
+			titolo_servizio.setTextColor(getResources().getColor(R.color.colorPrimary));
+			immagine_servizio.setImageResource(getResources().getIdentifier("immagine_ecopunti", "drawable", getPackageName()));
+			titolo_cosa_e.setTextColor(getResources().getColor(R.color.colorPrimary));
+			cosa_e.setText(R.string.cosa_ecopunti_mobili);
+			titolo_rifiuto_conferire.setTextColor(getResources().getColor(R.color.colorPrimary));
+			rifiuto_conferire.setText(R.string.rifiuti_ecopunti_mobili);
+			titolo_quando.setTextColor(getResources().getColor(R.color.colorPrimary));
+			quando.setText(R.string.quandodove_ecopunti_mobili);
 			break;
+			
+			case 3:
+				titolo_servizio.setText(R.string.titolo_raccolta_abiti);
+				titolo_servizio.setTextColor(getResources().getColor(R.color.colorPrimary));
+				immagine_servizio.setImageResource(getResources().getIdentifier("immagine_raccolta_abiti", "drawable", getPackageName()));
+				titolo_cosa_e.setTextColor(getResources().getColor(R.color.colorPrimary));
+				cosa_e.setText(R.string.cosa_raccolta_abiti);
+				titolo_rifiuto_conferire.setTextColor(getResources().getColor(R.color.colorPrimary));
+				rifiuto_conferire.setText(R.string.rifiuti_raccolta_abiti);
+				titolo_quando.setTextColor(getResources().getColor(R.color.colorPrimary));
+				quando.setText(R.string.quandodove_raccolta_abiti);
+				break;
+
+			case 4:
+				titolo_servizio.setText(R.string.titolo_oli_esausti);
+				titolo_servizio.setTextColor(getResources().getColor(R.color.colorPrimary));
+				immagine_servizio.setImageResource(getResources().getIdentifier("immagine_oli", "drawable", getPackageName()));
+				titolo_cosa_e.setTextColor(getResources().getColor(R.color.colorPrimary));
+				cosa_e.setText(R.string.cosa_oli_esausti);
+				titolo_rifiuto_conferire.setTextColor(getResources().getColor(R.color.colorPrimary));
+				rifiuto_conferire.setText(R.string.rifiuti_oli_esausti);
+				titolo_quando.setTextColor(getResources().getColor(R.color.colorPrimary));
+				quando.setText(R.string.quandodove_oli_esausti);
+				break;
+
+			case 5:
+				titolo_servizio.setText(R.string.titolo_autocompostaggio);
+				titolo_servizio.setTextColor(getResources().getColor(R.color.colorPrimary));
+				immagine_servizio.setImageResource(getResources().getIdentifier("immagine_autocompostaggio", "drawable", getPackageName()));
+				titolo_cosa_e.setTextColor(getResources().getColor(R.color.colorPrimary));
+				cosa_e.setText(R.string.cosa_autocompostaggio);
+				titolo_rifiuto_conferire.setTextColor(getResources().getColor(R.color.colorPrimary));
+				rifiuto_conferire.setText(R.string.rifiuti_autocompostaggio);
+				titolo_quando.setTextColor(getResources().getColor(R.color.colorPrimary));
+				quando.setText(R.string.quandodove_autocompostaggio);
+				break;
 		}
 	}
 
